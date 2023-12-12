@@ -10,7 +10,7 @@ namespace aboba
     {
         static void Main(string[] args)
         {
-            Zadanie_4();
+            Zadanie_5();
         }
 
         private static void Zadanie_1()
@@ -101,8 +101,35 @@ namespace aboba
             }
 
         }
+        private static void Zadanie_5()
+        {
+            int[,] array = new int[,] { { 1, 7, 3, 5, 5}, { 4, 5, 8, 4, 0 } };
+
+            int min = array[0, 0];
+            int max = array[0, 0];
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    if (array[i, j] < min)
+                    {
+                        min = array[i, j];
+                    }
+                    if (array[i, j] > max)
+                    {
+                        max = array[i, j];
+                    }
+                }
+            }
+
+            Console.WriteLine("Минимальное значение: " + min);
+            Console.WriteLine("Максимальное значение: " + max);
+        }
     }
 }
+    
+
     
 
 
