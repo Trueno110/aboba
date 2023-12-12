@@ -10,7 +10,7 @@ namespace aboba
     {
         static void Main(string[] args)
         {
-            Zadanie_2();
+            Zadanie_3();
         }
 
         private static void Zadanie_1()
@@ -65,6 +65,26 @@ namespace aboba
             }
 
             Console.WriteLine("Количество значений меньше "+ filterValue+ " : "+count);
+        }
+        private static void Zadanie_3()
+        {
+            int[] array = { 17, 62, 5, 34, 4, 7, 76, 5, 89, 7, 6, 5, 4, 4 };
+
+            Console.WriteLine("Введите три числа:");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            int num3 = Convert.ToInt32(Console.ReadLine());
+
+            int count = 0;
+            for (int i = 0; i < array.Length - 2; i++)
+            {
+                if (array[i] == num1 && array[i + 1] == num2 && array[i + 2] == num3)
+                {
+                    count++;
+                }
+            }
+
+            Console.WriteLine("Количество повторений последовательности: "+count);
         }
     }
 }
