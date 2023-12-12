@@ -10,7 +10,7 @@ namespace aboba
     {
         static void Main(string[] args)
         {
-            Zadanie_3();
+            Zadanie_4();
         }
 
         private static void Zadanie_1()
@@ -37,8 +37,8 @@ namespace aboba
 
             Console.ReadLine();
         }
-       
-        
+
+
         private static void Zadanie_2()
         {
             Console.WriteLine("Введите размер массива:");
@@ -64,7 +64,7 @@ namespace aboba
                 }
             }
 
-            Console.WriteLine("Количество значений меньше "+ filterValue+ " : "+count);
+            Console.WriteLine("Количество значений меньше " + filterValue + " : " + count);
         }
         private static void Zadanie_3()
         {
@@ -84,7 +84,22 @@ namespace aboba
                 }
             }
 
-            Console.WriteLine("Количество повторений последовательности: "+count);
+            Console.WriteLine("Количество повторений последовательности: " + count);
+        }
+        private static void Zadanie_4()
+        {
+            int[] M = { 17, 2, 23, 4, 6, 14, 89, 25, 876};
+            int[] N = { 36, 4, 53, 6, 17, 236, 78, 25, 14 };
+
+
+            int[] commonElements = M.Intersect(N).Distinct().ToArray();
+
+            Console.WriteLine("Общие элементы без повторений:");
+            foreach (var element in commonElements)
+            {
+                Console.WriteLine(element);
+            }
+
         }
     }
 }
